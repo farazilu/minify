@@ -129,8 +129,13 @@ $min_serveOptions['minApp']['groupsOnly'] = false;
  * array('//static' => 'D:\\staticStorage') // Windows
  * </code>
  */
-//$min_symlinks = array();
-$min_symlinks = array('//assets' => '/var/www/vhosts/core/assets');
+// $min_symlinks = array();
+$min_symlinks = array(
+    '//assets' => '/var/www/vhosts/core/assets/',
+    '//img/assets' => $_SERVER['DOCUMENT_ROOT'].'/img/assets/'
+);
+//print_r($min_symlinks);
+//die;
 /**
  * If you upload files from Windows to a non-Windows server, Windows may report
  * incorrect mtimes for the files.
@@ -156,3 +161,18 @@ $min_uploaderHoursBehind = 0;
 $min_libPath = dirname(__FILE__) . '/lib';
 // try to disable output_compression (may not have an effect)
 ini_set('zlib.output_compression', '0');
+if ($_SERVER['SERVER_NAME'] == '93.97.193.166') {
+    // testing
+    $min_allowDebugFlag = true;
+    $min_errorLogger = true;
+    $min_enableBuilder = true;
+    $min_cachePath = '/tmp';
+    $min_serveOptions['maxAge'] = 0; // see changes immediately
+} else {
+    // production
+    $min_allowDebugFlag = false;
+    $min_errorLogger = false;
+    $min_enableBuilder = false;
+    $min_cachePath = '/tmp';
+    $min_serveOptions['maxAge'] = 86400;
+}

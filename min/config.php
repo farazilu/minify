@@ -14,7 +14,7 @@ $min_enableBuilder = false;
  * If non-empty, the Builder will be protected with HTTP Digest auth.
  * The username is "admin".
  */
-$min_builderPassword = 'admin';
+$min_builderPassword = 'fjka;sdkljf kl;ajsd;f';
 /**
  * Set to true to log messages to FirePHP (Firefox Firebug addon).
  * Set to false for no error logging (Minify may be slightly faster).

@@ -103,7 +103,7 @@ $min_serveOptions['maxAge'] = 1800;
  * f or b GET parameters.
  * // = shortcut for DOCUMENT_ROOT
  */
-// $min_serveOptions['minApp']['allowDirs'] = array('//js', '//css');
+ $min_serveOptions['minApp']['allowDirs'] = array('//assets', '//img/assets');
 /**
  * Set to true to disable the "f" GET parameter for specifying files.
  * Only the "g" parameter will be considered.

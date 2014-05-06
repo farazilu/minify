@@ -14,7 +14,7 @@ $min_enableBuilder = false;
  * If non-empty, the Builder will be protected with HTTP Digest auth.
  * The username is "admin".
  */
-$min_builderPassword = 'fjka;sdkljf kl;ajsd;f';
+$min_builderPassword = 'lsdhsdhflsdfieur8943 vrt345345jk b5i5hht lg';
 /**
  * Set to true to log messages to FirePHP (Firefox Firebug addon).
  * Set to false for no error logging (Minify may be slightly faster).
@@ -166,13 +166,11 @@ if ($_SERVER['SERVER_NAME'] == '93.97.193.166') {
     $min_allowDebugFlag = true;
     $min_errorLogger = true;
     $min_enableBuilder = true;
-    $min_cachePath = '/tmp';
     $min_serveOptions['maxAge'] = 0; // see changes immediately
 } else {
     // production
     $min_allowDebugFlag = false;
     $min_errorLogger = false;
     $min_enableBuilder = false;
-    $min_cachePath = '/tmp';
     $min_serveOptions['maxAge'] = 86400;
 }

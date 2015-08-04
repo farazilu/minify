@@ -166,7 +166,7 @@ if ($_SERVER['SERVER_NAME'] == TEST_SITE_IP || $_SERVER['REMOTE_ADDR'] == TEST_S
     $min_allowDebugFlag = true;
     $min_errorLogger = true;
     $min_enableBuilder = true;
-    $min_serveOptions['maxAge'] = 0; // see changes immediately
+    $min_serveOptions['maxAge'] = 120; // see changes immediately
 } else {
     // production
     $min_allowDebugFlag = false;
